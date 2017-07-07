@@ -33,7 +33,7 @@ public class CustomList extends ArrayAdapter<String>{
         TextView appInfoText = (TextView) listItem.findViewById(R.id.appInfoText);
         ImageView appImg = (ImageView) listItem.findViewById(R.id.appImg);
         appInfoText.setText(appInfo[position]);
-        
+
         // https://developer.android.com/reference/android/widget/ArrayAdapter.html
         return super.getView(position, convertView, parent);
     }
