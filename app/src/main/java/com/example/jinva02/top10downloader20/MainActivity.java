@@ -49,12 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 // TODO: add activation code
                 ParseApplication parseApplication = new ParseApplication(mFileContents);
                 parseApplication.process();
-                for(Application app:parseApplication.getApplications()) {
-                    listApps.
-                }
-//                ArrayAdapter<Application> arrayAdapter= new ArrayAdapter<Application>(
-//                        MainActivity.this, R.layout.list_item_image, parseApplication.getApplications());
-//                listApps.setAdapter(arrayAdapter);
+                ArrayAdapter<Application> arrayAdapter= new ArrayAdapter<Application>(
+                        MainActivity.this, R.layout.list_item, parseApplication.getApplications());
+                listApps.setAdapter(arrayAdapter);
             }
         });
 
